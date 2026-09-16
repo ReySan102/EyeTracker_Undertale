@@ -1,8 +1,8 @@
 # EyeTale
 
-Play Undertale with your eyes: a webcam, MediaPipe face tracking, and a control scheme that turns gaze and blinks into the game's keyboard input. The game is not modified.
+Control Undertale using nothing but your eyes. A webcam feeds MediaPipe's face tracker, and a mapping layer turns your gaze and blinks into the game's own keyboard presses — the game itself stays untouched.
 
-Read `DESIGN.md` for the full rundown of how it works, every module and function, the build order, and tuning.
+See `DESIGN.md` for the deep dive: every module, every function, the order things get built in, and how the tuning works.
 
 ## Quick start (Windows)
 
@@ -19,14 +19,14 @@ python -m eyetale.app watch          # shows what the screen reader sees, sends 
 python -m eyetale.app play           # play
 ```
 
-Run Undertale windowed (not F4 fullscreen). Useful flags: `--dry-run`, `--source mouse`, `--log`, `--source replay --replay logs/gaze_log.csv`, `--no-hud`.
+Play with Undertale windowed rather than fullscreened via F4. Handy flags along the way: `--dry-run`, `--source mouse`, `--log`, `--source replay --replay logs/gaze_log.csv`, `--no-hud`.
 
 *** If encountered error: "cannot be loaded because running scripts is disabled on this system" run:
 
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 .venv\Scripts\activate
 
-RemoteSigned lets locally created scripts run while still requiring a signature on anything downloaded, so it's the setting Microsoft recommends for exactly this situation. If you'd rather not change anything permanently, Set-ExecutionPolicy -Scope Process Bypass does the same for the current window only, and you'd repeat it each time you open a new terminal.
+With RemoteSigned, scripts you wrote yourself still run, but anything downloaded still has to carry a signature — which is exactly why Microsoft points people toward it for cases like this. Prefer not to touch a permanent setting? `Set-ExecutionPolicy -Scope Process Bypass` gets you the same result for just the current window, though you'll need to run it again each time you open a new terminal.
 
 ## Layout
 
