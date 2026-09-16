@@ -1,0 +1,76 @@
+{
+  "gaze_source": "webcam",
+  "tick_hz": 60,
+  "dry_run": false,
+  "calibration_path": "calibration.json",
+  "model_path": "models/face_landmarker.task",
+  "log_path": "logs/gaze_log.csv",
+  "log_gaze": false,
+  "keys": {
+    "up": "up",
+    "down": "down",
+    "left": "left",
+    "right": "right",
+    "confirm": "z",
+    "cancel": "x",
+    "menu": "c"
+  },
+  "camera": {
+    "index": 0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "mirror_preview": true
+  },
+  "filter": {
+    "min_cutoff": 1.0,
+    "beta": 0.02,
+    "d_cutoff": 1.0
+  },
+  "gestures": {
+    "ear_closed_ratio": 0.6,
+    "ear_open_ratio": 0.75,
+    "ear_closed_abs": 0.18,
+    "ear_open_abs": 0.22,
+    "natural_blink_max_s": 0.25,
+    "long_blink_min_s": 0.35,
+    "long_blink_max_s": 1.2,
+    "double_blink_gap_s": 0.45,
+    "eyes_closed_pause_s": 1.6,
+    "dwell_s": 0.6,
+    "dwell_cooldown_s": 0.8,
+    "gaze_hold_during_blink_s": 0.3,
+    "face_lost_release_s": 0.5
+  },
+  "overworld": {
+    "dead_zone_enter": 0.14,
+    "dead_zone_exit": 0.09
+  },
+  "dodge": {
+    "dead_zone_enter_px": 14.0,
+    "dead_zone_exit_px": 6.0,
+    "blue_jump_px": 28.0,
+    "green_aim_px": 40.0,
+    "yellow_fire_interval_s": 0.25,
+    "tap_hold_s": 0.07
+  },
+  "game": {
+    "window_title": "UNDERTALE",
+    "capture_fps": 60,
+    "fallback_rect": [
+      100,
+      100,
+      640,
+      480
+    ],
+    "soul_min_pixels": 40,
+    "color_tolerance": 60
+  },
+  "hud": {
+    "enabled": true,
+    "width": 440,
+    "height": 520,
+    "gap_px": 12,
+    "show_camera": true
+  }
+}
